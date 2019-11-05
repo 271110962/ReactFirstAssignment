@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+.row{
+    background-color: rgb(41, 48, 40);
+}
+.badge-pill{
+    border-radius: 15px 50px 30px;
+}
+.badge-success{
+    background-color: rgb(221, 25, 25);
+}
+.fa-book{
+    color: rgb(12, 57, 153);
+}
+.fontjinyu{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 900;
+    color:rgb(250, 250, 250);
+    text-shadow:0 0 20px #ff005b;
+}
+.fontjinyu:after{
+    content: attr(data-text);
+    position: absolute;
+    top:0;
+    left:0;
+    padding:0 20px;
+    z-index: -1;
+    color:#ff005b;
+    filter: blur(100px);
+}
