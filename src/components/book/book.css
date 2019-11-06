@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=McLaren&display=swap');
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+
+.card-body  {
+    word-break:break-all;
+    
+  }
+
+.bookmarkfont{
+    font-family: 'McLaren', cursive;
+}
