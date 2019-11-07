@@ -1,0 +1,58 @@
+{
+  "results":[
+        {
+            "id":"1",
+            "name": "Pride and Prejudice",
+            "author": {
+                    "name":{ "first":"Jane", "last":"Austen"}
+                },
+            "mark" : "10",
+            "picture": {"thumbnail": "./images/pride.jpg"}
+        },
+        {
+            "id":"2",
+            "name": "Three Body",
+            "author": {
+                    "name":{ "first":"Cixin", "last":"Liu"}
+                },
+            "mark" : "10",
+            "picture": {"thumbnail": "./images/threebody.jpg"}
+        },
+        {
+            "id":"3",
+            "name": "Goosebumps",
+            "author": {
+                    "name":{ "first":"Eric", "last":"Affabee"}
+                },
+            "mark" : "3.5",
+            "picture": {"thumbnail": "./images/goosebumps.jpg"}
+        },
+        {
+            "id":"4",
+            "name": "Twenty Thousand Leagues Under The Sea",
+            "author": {
+                    "name":{ "first":"Jules", "last":"Verne"}
+                },
+            "mark" : "10",
+            "picture": {"thumbnail": "./images/twentysea.jpg"}
+        },
+        {
+            "id":"5",
+            "name": "Walden",
+            "author": {
+                    "name":{ "first":"Henry David", "last":"Thoreau"}
+                },
+            "mark" : "8.3",
+            "picture": {"thumbnail": "./images/walden.jpg"}
+        },
+        {
+            "id":"6",
+            "name": "Kinder-und Hausmärchen",
+            "author": {
+                    "name":{ "first":"Wilhelm", "last":"Grimm"}
+                },
+            "mark" : "9.3",
+            "picture": {"thumbnail": "./images/grimm.jpg"}
+        }
+    ]
+}

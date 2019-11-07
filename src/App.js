@@ -1,25 +1,29 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.css';
+import Header from '../src/components/header/';
+import FilterControls from '../src/components/filterControls/';
+import BookList from '../src/components/bookList/';
+import datafile from './data/data.json';
+import api from "./dataChange/datachangeAPI";
 
 class App extends Component {
+
+  componentDidMount(){
+      let{results : books} =datafile;
+      api.initialize(books);
+      this.setState({});
+  }
+
+
   render() {
+    let books = api.getAll();
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className="appbackground">
+        <Header noBooks={10} />
+        <FilterControls />
+        <BookList books={books} />
       </div>
     );
   }

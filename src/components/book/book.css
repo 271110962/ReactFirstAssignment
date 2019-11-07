@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=McLaren&display=swap');
 .col-sm-4{
-    margin-bottom: 30px;
+    padding: 50px 80px;
 }
+
 .center {
     display: block;
     margin-left: auto;

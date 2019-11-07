@@ -19,7 +19,7 @@ class Book extends Component{
                 </h5>
                     <p key="author">
                      <FontAwesomeIcon icon={["fas", "user"]} />    
-                     {`${this.props.book.author.name.first} ${this.props.book.author.name.last}`}
+                     {`  ${this.props.book.author.name.first} ${this.props.book.author.name.last}`}
                     </p>
 
                     <div className="mark">
