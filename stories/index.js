@@ -5,6 +5,7 @@ import Header from '../src/components/header/';
 import FilterControls from '../src/components/filterControls/';
 import Book from '../src/components/book/';
 import BookList from '../src/components/bookList/';
+import { action } from '@storybook/addon-actions';
 
 
 
@@ -33,7 +34,7 @@ storiesOf("Book Room/Filter Controls", module).add("default", () => (
 
 
 storiesOf("Book Room/Book", module).add("default", () => ( 
-  <Book book={sample}/>
+  <Book book={sample} deleteHandler={action('Delete confirmed') }/>
 )); 
 
 storiesOf("Book Room/Book List", module).add("default", () => { 
