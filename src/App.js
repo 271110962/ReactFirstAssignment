@@ -9,6 +9,8 @@ import api from "./dataChange/datachangeAPI";
 
 class App extends Component {
 
+  state = {search:"", category:"all"};
+
   componentDidMount(){
       let{results : books} =datafile;
       api.initialize(books);

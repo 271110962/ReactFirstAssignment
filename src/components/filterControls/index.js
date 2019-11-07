@@ -12,7 +12,7 @@ export default class FilterControls extends Component {
                     
 
                     <div class="form-group-filter">
-                            <select id="demo_overview_minimal" class="filterform" data-role="select-dropdown" data-profile="minimal">
+                            <select id="category" className="filterform" data-role="select-dropdown" data-profile="minimal">
                             <option>Category</option>
                             <option>Childrens'Book</option>
                             <option>Science Fiction</option>

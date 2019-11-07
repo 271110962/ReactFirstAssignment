@@ -3,25 +3,87 @@ import "./book.css";
 import Star from "../star/star";
 import "../../fontawesome";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import buttons from "../../config/buttonconfig";
+import api from "../../dataChange/datachangeAPI";
 
 class Book extends Component{
+    state ={
+        status:"",
+        name: this.props.book.name,
+        type: this.props.book.type,
+        previousDetails: {
+            name: this.props.book.name,
+            type: this.props.book.type
+            }
+    };
+
+
+    handleEdit=()=>this.setState({status:"edit"});
+
+    handleSave=e=>{
+        e.preventDefault();
+        let updatedName = this.state.name.trim();
+        let updatedType = this.state.type.trim();
+        if(!updatedName || !updatedType){
+            return;
+        }
+        let {name,type} = this.state;
+        this.setState({ status:"",previousDetails:{name,type}});
+        api.update(this.state.previousDetails.name,updatedName,updatedType);
+    };
+
+    handleCancel=()=>{
+        let{name,type} = this.state.previousDetails;
+        this.setState({status:"",name,type});
+    };
+
+    handleNameChange=e=>this.setState({name:e.target.value});
+    handleTypeChange=e=>this.setState({type:e.target.value});
+
     render(){
+
+        let activeButtons=buttons.normal;
+        let leftButtonHandler = this.handleEdit;
+        let rightButtonHandler = this.handleDelete;
+        let cardColor = "bg-white";
+
+        if (this.state.status === "edit") {
+            cardColor = "bg-primary";
+            activeButtons = buttons.edit;
+            leftButtonHandler = this.handleSave;
+            rightButtonHandler = this.handleCancel;
+          }
+
         return(
             <div className = "col-sm-4">
-                <div className = "card">
+                <div className ={`card ${cardColor}`}>
                 <img className="card-img-tag center " alt={this.props.book.name} src={this.props.book.picture.thumbnail} />
                 <div className="card-body">
                 <h5 className="card-title ">
+                {this.state.status === "edit" ? (
+                    <p>
+                        <input type="text" className="form-control" value={this.state.name} onChange={this.handleNameChange}/>
+                    </p>):(
                     <p key="authorbook">
-                        <FontAwesomeIcon icon={["fas", "book"]} />
-                        <span> {this.props.book.name}</span>
-                    </p>
+                    <FontAwesomeIcon icon={["fas", "book"]} />
+                    <span> {this.props.book.name}</span>
+                </p>
+                    )}
                 </h5>
-                    <p key="author">
+                    <p>
                      <FontAwesomeIcon icon={["fas", "user"]} />    
                      {`  ${this.props.book.author.name.first} ${this.props.book.author.name.last}`}
                     </p>
-
+                {this.state.status === "edit" ? (
+                    <p>
+                         <input type="text" className="form-control" value={this.state.type} onChange={this.handleTypeChange}/>
+                    </p>
+                ):(
+                    <p key="type">
+                        <FontAwesomeIcon icon={["fas", "bookmark"]} />
+                        <span> {this.props.book.type}</span>
+                    </p>
+                )}
                     <div className="mark">
                         <span className ="bookmarkfont">Bookmark: </span><Star star={this.props.book.mark}/>
                     </div>
@@ -29,8 +91,8 @@ class Book extends Component{
 
                 <div className="card-footer">
                     <div className="btn-group d-flex btn-group-justified" role="group" aria-label="...">
-                        <button type="button" className={"btn btn-default w-100"}>{" Edit "}</button>
-                        <button type="button" className={"btn btn-danger w-100"}>{"Delete"}</button>
+                        <button type="button" className={"btn btn-default w-100"+ activeButtons.leftButtonColor} onClick={leftButtonHandler}> {activeButtons.leftButtonVal}</button>
+                        <button type="button" className={"btn btn-danger w-100"+ activeButtons.rightButtonColor} onClick={rightButtonHandler}>{activeButtons.rightButtonVal}</button>
                     </div>
                 </div>
                 </div>

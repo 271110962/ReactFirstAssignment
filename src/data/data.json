@@ -7,6 +7,7 @@
                     "name":{ "first":"Jane", "last":"Austen"}
                 },
             "mark" : "10",
+            "type" : "Romantic",
             "picture": {"thumbnail": "./images/pride.jpg"}
         },
         {
@@ -16,6 +17,7 @@
                     "name":{ "first":"Cixin", "last":"Liu"}
                 },
             "mark" : "10",
+            "type" : "Science",
             "picture": {"thumbnail": "./images/threebody.jpg"}
         },
         {
@@ -25,6 +27,7 @@
                     "name":{ "first":"Eric", "last":"Affabee"}
                 },
             "mark" : "3.5",
+            "type" : "Children",
             "picture": {"thumbnail": "./images/goosebumps.jpg"}
         },
         {
@@ -34,6 +37,7 @@
                     "name":{ "first":"Jules", "last":"Verne"}
                 },
             "mark" : "10",
+            "type" : "Science",
             "picture": {"thumbnail": "./images/twentysea.jpg"}
         },
         {
@@ -43,6 +47,7 @@
                     "name":{ "first":"Henry David", "last":"Thoreau"}
                 },
             "mark" : "8.3",
+            "type" : "Romantic",
             "picture": {"thumbnail": "./images/walden.jpg"}
         },
         {
@@ -52,6 +57,7 @@
                     "name":{ "first":"Wilhelm", "last":"Grimm"}
                 },
             "mark" : "9.3",
+            "type" : "Children",
             "picture": {"thumbnail": "./images/grimm.jpg"}
         }
     ]
