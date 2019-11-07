@@ -17,6 +17,11 @@ class App extends Component {
       this.setState({});
   }
 
+  deleteBook = (key) => {
+    api.delete(key); 
+    this.setState({});                          
+  };
+
 
   render() {
     let books = api.getAll();
@@ -25,7 +30,7 @@ class App extends Component {
       <div className="appbackground">
         <Header noBooks={10} />
         <FilterControls />
-        <BookList books={books} />
+        <BookList books={books} deleteHandler={this.deleteBook} />
       </div>
     );
   }

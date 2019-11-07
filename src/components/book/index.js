@@ -9,9 +9,11 @@ import api from "../../dataChange/datachangeAPI";
 class Book extends Component{
     state ={
         status:"",
+        id: this.props.book.id,
         name: this.props.book.name,
         type: this.props.book.type,
         previousDetails: {
+            id: this.props.book.id,
             name: this.props.book.name,
             type: this.props.book.type
             }
@@ -40,6 +42,13 @@ class Book extends Component{
     handleNameChange=e=>this.setState({name:e.target.value});
     handleTypeChange=e=>this.setState({type:e.target.value});
 
+
+    handleDelete = () =>  this.setState({ status : 'del'} );
+    handleConfirm=(e)=>{
+        e.preventDefault();
+        this.props.deleteHandler(this.state.id);
+    }
+
     render(){
 
         let activeButtons=buttons.normal;
@@ -52,6 +61,11 @@ class Book extends Component{
             activeButtons = buttons.edit;
             leftButtonHandler = this.handleSave;
             rightButtonHandler = this.handleCancel;
+          }else if (this.state.status === 'del' ) {
+            cardColor = "bg-warning";
+            activeButtons = buttons.delete;
+            leftButtonHandler = this.handleCancel;
+            rightButtonHandler = this.handleConfirm;
           }
 
         return(
