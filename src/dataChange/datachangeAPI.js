@@ -21,6 +21,11 @@ class DataAPI {
         return elements;
     }
 
+
+    sortmark() {
+        return _.sortBy(this.books,b => b.mark).reverse();
+    }
+
     initialize(books) {
         this.books = books;
     }

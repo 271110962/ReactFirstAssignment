@@ -5,6 +5,7 @@ import "../../fontawesome";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import buttons from "../../config/buttonconfig";
 import api from "../../dataChange/datachangeAPI";
+import { Link } from "react-router-dom";
 
 class Book extends Component{
     state ={
@@ -71,7 +72,9 @@ class Book extends Component{
         return(
             <div className = "col-sm-4">
                 <div className ={`card ${cardColor}`}>
+                <Link to={`/books/${this.props.book.id}${this.props.book.publishdate}`}>
                 <img className="card-img-tag center " alt={this.props.book.name} src={this.props.book.picture.thumbnail} />
+                </Link>
                 <div className="card-body">
                 <h5 className="card-title ">
                 {this.state.status === "edit" ? (

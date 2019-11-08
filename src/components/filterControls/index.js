@@ -2,6 +2,37 @@ import React,{Component} from "react";
 import "./filterControls.css"
 
 export default class FilterControls extends Component {
+
+    handleSearchChange=(e,type,value)=>{
+        e.preventDefault();
+        this.props.onUserInput(type,value);
+    };
+
+    handleCategoryChange = e => {
+        this.handleSearchChange(e, "category", e.target.value);
+    };
+
+
+
+    handleButtonChange=(e,type)=>{
+        e.preventDefault();
+        this.props.onUser(type);
+    }
+
+    handleHome = e =>{
+        this.handleButtonChange(e, "home")
+    }
+
+
+    handleMark = e =>{
+        this.handleButtonChange(e, "click");
+    }
+
+
+    handleDate = e =>{
+        this.handleButtonChange(e, "date");
+    }
+
     render(){
         return(
             
@@ -12,19 +43,19 @@ export default class FilterControls extends Component {
                     
 
                     <div class="form-group-filter">
-                            <select id="category" className="filterform" data-role="select-dropdown" data-profile="minimal">
+                            <select id="type" className="filterform" data-role="select-dropdown" data-profile="minimal" onChange={this.handleCategoryChange}>
                             <option>Category</option>
-                            <option>Childrens'Book</option>
-                            <option>Science Fiction</option>
-                            <option>Romantic Novel</option>
+                            <option>Children</option>
+                            <option>Science</option>
+                            <option>Romantic</option>
                              </select>
                     </div>
 
 
                             <div>
-                                <button className="fliterbtn" href="#" >Home</button>
-                                <button className="fliterbtn" href="#" >Leaderboard</button>
-                                <button className="fliterbtn" href="#" >New Shelves</button>                             
+                                <button className="fliterbtn" href="#" onClick={this.handleHome}>Home</button>
+                                <button className="fliterbtn" href="#" onClick={this.handleMark}>Leaderboard</button>
+                                <button className="fliterbtn" href="#" onClick={this.handleDate}>New Shelves</button>                             
                            </div> 
                         </nav>
                     </div>
