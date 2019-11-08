@@ -8,7 +8,7 @@
                 },
             "mark" : "6",
             "type" : "Romantic",
-            "publishdate":"1988",
+            "publishdate":"19880127",
             "picture": {"thumbnail": "./images/pride.jpg"}
         },
         {
@@ -19,7 +19,7 @@
                 },
             "mark" : "5",
             "type" : "Science",
-            "publishdate":"1992",
+            "publishdate":"19920918",
             "picture": {"thumbnail": "./images/threebody.jpg"}
         },
         {
@@ -30,7 +30,7 @@
                 },
             "mark" : "4",
             "type" : "Children",
-            "publishdate":"1989",
+            "publishdate":"19890912",
             "picture": {"thumbnail": "./images/goosebumps.jpg"}
         },
         {
@@ -41,7 +41,7 @@
                 },
             "mark" : "3",
             "type" : "Science",
-            "publishdate":"1961",
+            "publishdate":"19611201",
             "picture": {"thumbnail": "./images/twentysea.jpg"}
         },
         {
@@ -52,7 +52,7 @@
                 },
             "mark" : "2",
             "type" : "Romantic",
-            "publishdate":"1999",
+            "publishdate":"19990325",
             "picture": {"thumbnail": "./images/walden.jpg"}
         },
         {
@@ -63,7 +63,7 @@
                 },
             "mark" : "1",
             "type" : "Children",
-            "publishdate":"2016",
+            "publishdate":"20161205",
             "picture": {"thumbnail": "./images/grimm.jpg"}
         }
     ]

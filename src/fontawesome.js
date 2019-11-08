@@ -9,6 +9,7 @@ import {
   faUser,
   faBookmark,
   faCalendar,
+  faBuilding
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faEnvelope, faPhone, faHome, faBirthdayCake, faArrowCircleLeft,faBook,faUser,faBookmark,faCalendar);
+library.add(faEnvelope, faPhone, faHome, faBirthdayCake, faArrowCircleLeft,faBook,faUser,faBookmark,faCalendar,faBuilding);
