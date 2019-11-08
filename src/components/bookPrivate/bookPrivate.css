@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
+.privaterow{
+    font-family: 'Rubik', sans-serif;
+}
+
+.privaterow h3{
+    font-weight: bold;
+}
