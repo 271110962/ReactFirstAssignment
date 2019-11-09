@@ -102,7 +102,7 @@ class Book extends Component{
                     </p>
                 )}
                     <div className="mark">
-                        <span className ="bookmarkfont"> Bookmark: </span><Star star={this.props.book.mark}/>
+                        <span className ="bookmarkfont"> Review: </span><Star star={this.props.book.mark}/>
                     </div>
                 </div>
 
