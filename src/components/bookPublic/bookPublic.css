@@ -1,0 +1,27 @@
+img.book {
+    float: left;
+    border: 1px solid black;
+    margin-bottom: 2em;
+    background-color: gold;
+    padding: 1em;
+    width: 100%;
+  }
+
+  .row {
+    margin-bottom: 10px;
+  }
+
+  .moving{
+    margin-left:30%;
+    background-color: pink;
+  }
+
+  .col-3{
+    background-color: blue;
+    margin-left:10%;
+  }
+
+  .bottommoving{
+    margin-top:20px;
+    margin-left:10%;
+  }

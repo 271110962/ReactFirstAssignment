@@ -8,7 +8,7 @@ class DataAPI {
     find(id) {
         let index = _.findIndex(
         this.books,
-        book => `${book.id}` === id
+        book => `${book.id}${book.publishdate}` === id
         );
         if (index !== -1) {
         return this.books[index];
@@ -16,15 +16,15 @@ class DataAPI {
         return null;
     }
 
+    
+
     delete(k) {
         let elements = _.remove(this.books, book => book.id === k);
         return elements;
     }
 
 
-    sortmark() {
-        return _.sortBy(this.books,b => b.mark).reverse();
-    }
+
 
     initialize(books) {
         this.books = books;
