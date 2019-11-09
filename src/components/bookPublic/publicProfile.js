@@ -17,15 +17,15 @@ export default ({ user }) => {
         <Fragment>
         <h4>
           <FontAwesomeIcon icon={["fas", "user"]} />
-          <span> {author}</span>
+          <span> Author: {author}</span>
         </h4>
         <h4>
           <FontAwesomeIcon icon={["fas", "calendar"]} />
-          <span> {bookdate}</span>
+          <span> Publish Date: {bookdate}</span>
         </h4>
         <h4>
           <FontAwesomeIcon icon={["fas", "building"]} />
-          <span> {press}</span>
+          <span> Press: {press}</span>
         </h4>
         <h4>
           <FontAwesomeIcon icon={["fas", "bookmark"]} />

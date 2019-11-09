@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Righteous&display=swap');
 img.book {
     float: left;
     border: 1px solid black;
@@ -13,15 +14,26 @@ img.book {
 
   .moving{
     margin-left:30%;
-    background-color: pink;
   }
 
   .col-3{
-    background-color: blue;
     margin-left:10%;
   }
 
   .bottommoving{
     margin-top:20px;
     margin-left:10%;
+
+  }
+
+  .f{
+    font-size:30px;
+  }
+  
+  .publicbg{
+    background-image: url('./publicbg2.jpg');
+    font-family: 'Indie Flower', cursive;
+    font-family: 'Righteous', cursive;
+ 
+
   }

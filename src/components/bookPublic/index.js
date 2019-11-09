@@ -11,11 +11,12 @@ export default ({ user }) => {
 
     return(
         <Fragment>
+      <div className="publicbg">
       <div className="row">
       <div className="col-2">
         <Link to="/">
-          <FontAwesomeIcon icon={["fas", "arrow-circle-left"]} size="3x" />
-          <span>Back</span>
+          <FontAwesomeIcon icon={["fas", "chevron-circle-left"]} size="3x" />
+          <span className="f"> Back</span>
         </Link>
         </div>
         <div className="moving">
@@ -30,6 +31,7 @@ export default ({ user }) => {
           <PublicProfile user={user} />
         </div>
       </div>
+    </div>
     </Fragment>
     );
 };
