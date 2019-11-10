@@ -29,7 +29,7 @@ export default ({ user }) => {
         </h4>
         <h4>
           <FontAwesomeIcon icon={["fas", "bookmark"]} />
-          <span> Bookmark: {<Star star={user.mark}/>}</span>
+          <span> Book Review: {<Star star={user.mark}/>}</span>
         </h4>
       </Fragment>
     );

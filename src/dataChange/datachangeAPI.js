@@ -39,7 +39,6 @@ class DataAPI {
         if (index !== -1) {
         this.books[index].name = name;
         this.books[index].type = type;
-        //输入你想改的属性
         return true;
         }
         return false;

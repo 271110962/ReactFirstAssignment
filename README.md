@@ -19,38 +19,52 @@ and view the book's content introduction and metadata.
 
 ## Setup.
 
-. . . . Having cloned the repo, state the steps required to install and run the app . . . . .
+git clone https://github.com/271110962/ReactFirstAssignment.git
+
+cd ReactFirstAssignment
+
+npm install
+
+npm start
+
 
 ## Data Model Design.
 
-. . . . . A diagram of app's data model (see example below) AND/OR a sample of the test data used (JSON or equivalent).
+I used json to store data
 
-![][model]
+{
+            "id":"1",
+            "name": "Kinder-und Hausmärchen",
+            "author": {
+                    "name":{ "first":"Wilhelm", "last":"Grimm"}
+                },
+            "mark" : "1",
+            "type" : "Children",
+            "large": "../../images/grimm.jpg",
+            "publishdate":"20161205",
+            "publishinghouse": "dublin Press",
+            "picture": {"thumbnail": "./images/grimm.jpg"}
+        }
 
-. . . Briefly explain any non-trivial aspects of the model . . . . .
-
-~~~
-place code snippets, e.g. JSON, inside these fence delimiters and they will appear in a block-like structure.
-~~~
 ## UI Design.
 
 . . . . . Screenshots of the app's views with brief statements of their use (see examples below) . . . . . . .
 
 ![][main]
 
->> Shows a card for each contact in the datastore. This contact list can be filtered by name and gender. A contact can be edited or deleted a contact. 
+>> Shows a book for each book in the dataChange. This book list can be filtered by name and categoty. A book can be edited or deleted a book. 
 
 ![][detail]
 
->> . . . bla bla bla . . . . . 
+>> using the filter to connect the catogory selector and the searchbox, it will filter the data with the dataChangeApi, and render to the page, using the buttonconfig in the config folder to change the situation when you edit and delete, you can cancel whatever you choose.
 
 ## Routing.
 
 . . . . List each route supported by the app. For each one state the associated view and whether it's public/private (requires authentication) . . . . .
 
-- /articles (public)- displays all published articles - title and author only.
-- /articles/:id (private) - detail view of a particular article.
-+ /articles/:author:id - display all articles by a specific author.
+- /books (public)- displays all public content, header,booklist,book,filterControls.
+- /books/:id (private) - detail view of a particular book.
++ /books/:id/introduction(private) - display all information by a specific book.
 - etc
 - etc
 
@@ -64,11 +78,11 @@ place code snippets, e.g. JSON, inside these fence delimiters and they will appe
 
 ## Backend (Optional).
 
-. . . . . Briefly explain any backend used by the app (e.g. JSON-server, Open API) . . . . . .  
+JSON-server store the each book data: id, bookname, publish date, press, author, introduction for a book.
 
 ## Authentication (Optional).
 
-. . . . Briefly explain the authentication method used by your app (e.g. JWT, Firebase) ). If user registration is not supported, mention test username/password pairs available . . . . . .
+using the Surge to deployed the app.  url:  http://doubtful-meal.surge.sh/
 
 ## Independent learning.
 

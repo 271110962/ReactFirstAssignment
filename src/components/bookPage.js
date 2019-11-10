@@ -14,6 +14,7 @@ const BookPage = props => {
           <Fragment>
             <BookPublic user={book}/>
             {!props.history.location.pathname.endsWith("/private")&&(
+              // eslint-disable-next-line
               <Link className="btn btn-warning active" style={{marginTop: '40px'},{marginLeft: '50%'}} to={`/books/${id}/introduction`}>See the Introduction</Link>
             )}
             <Route path={`/books/:id/introduction`}          
