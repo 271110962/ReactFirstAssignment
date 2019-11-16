@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default ({ user }) => {
     const author = capitalize(
-      `${user.author.name.last} ${user.author.name.first}`
+      `${user.authorlast} ${user.authorfirst}`
     );
     const press =capitalize(
        `${user.publishinghouse}`

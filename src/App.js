@@ -7,9 +7,17 @@ import BookList from '../src/components/bookList/';
 import api from "./dataChange/datachangeAPI";
 import _ from "lodash";
 
-class App extends Component {
+import app from "./base";
 
-  state = {search:"", category:"Category",status:""};
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.addNewBook = this.addNewBook.bind(this);
+    
+  }
+
+
+  state = {search:"", category:"Category",status:"",newBook:"false"};
 
   handleSearchChange = (type, value) => {
     this.setState({status:""})
@@ -29,7 +37,10 @@ class App extends Component {
     }
   }
 
-
+  addNewBook = (name, authorfirst,authorlast) =>{
+    api.add(name, authorfirst,authorlast)
+    this.setState({newBook:true});
+  };
 
   deleteBook = (key) => {
     api.delete(key); 
@@ -64,7 +75,7 @@ class App extends Component {
 
     return (
       <Fragment className="appbackground">
-        
+        <button onClick={() => app.auth().signOut()}>Log out</button>
         <Header noBooks={sortOrNot.length} onUserInput={this.handleSearchChange}/>
         <FilterControls onUserInput={this.handleSearchChange} onUser={this.handleButtonChange}/>
         <BookList books={sortOrNot} deleteHandler={this.deleteBook}/>

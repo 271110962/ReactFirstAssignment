@@ -9,6 +9,7 @@ import { action } from '@storybook/addon-actions';
 import { MemoryRouter, Route } from "react-router";
 import PublicProfile from '../src/components/bookPublic/publicProfile'
 import BookPrivateDetails from '../src/components/bookPrivate/'
+import BookForm from '../src/components/bookform';
 
 
 
@@ -67,6 +68,8 @@ storiesOf("Book Room/Book Page/BookPrivate", module)
 .add("default", () => ( 
    <BookPrivateDetails user={sample}/>
 ));
+
+storiesOf("Book Room/New Form", module).add("default",()=><BookForm />)
 
 
 

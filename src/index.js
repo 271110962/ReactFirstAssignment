@@ -6,7 +6,12 @@ import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import './index.css';
 import App from './App';
 import BookPage from "./components/bookPage";
+import bookAddPage from "./components/bookAddPage";
 import datafile from './data/data.json';
+import Login from "./Login";
+import SignUp from "./SignUp"
+import { AuthProvider } from "./Auth";
+import PrivateRoute from "./PrivateRoute";
 
 class Router extends Component{
     
@@ -18,17 +23,23 @@ class Router extends Component{
 
     render(){
         return(
+          <AuthProvider>
             <BrowserRouter>
             <div className="jumbotron">
-              <div className="container-fluid ">
+
                 <Switch>
+                  <PrivateRoute exact path="/home" component={App} />
+                  <Route exact path="/login" component={Login}/>
+                  <Route exact path="/" component={SignUp}/>
                   <Route path="/books/:id" component={BookPage} />
-                  <Route exact path="/" component={App} />
+                  <Route path="/book/addBook" component={bookAddPage} />
+                 
                   <Redirect from="*" to="/" />
                 </Switch>
-              </div>
+              
             </div>
           </BrowserRouter>
+        </AuthProvider>
         );
     }
 }

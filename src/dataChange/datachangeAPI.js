@@ -23,7 +23,28 @@ class DataAPI {
         return elements;
     }
 
+    add(name, authorfirst,authorlast){
+        let id = 1;
+        let end = _.last(this.books);
 
+        if(end){
+        id = end.id + 1;
+        }
+        let len = this.books.length;
+        let newLen = this.books.push({
+            id ,
+            name,
+            authorfirst,
+            authorlast,
+            mark:"6",
+            type:"Science",
+            publishdate:"19921205",
+            publishinghouse:"shenzhen press",
+            introduction:"iudhudiuindininj",
+            picture:{thumbnail: "./images/grimm.jpg"}
+        });
+        return newLen>len;
+    }
 
 
     initialize(books) {

@@ -50,11 +50,11 @@ I used json to store data
 
 . . . . . Screenshots of the app's views with brief statements of their use (see examples below) . . . . . . .
 
-![][main]
+![./img/main.png][main]
 
 >> Shows a book for each book in the dataChange. This book list can be filtered by name and categoty. A book can be edited or deleted a book. 
 
-![][detail]
+![./img/detail.png][detail]
 
 >> using the filter to connect the catogory selector and the searchbox, it will filter the data with the dataChangeApi, and render to the page, using the buttonconfig in the config folder to change the situation when you edit and delete, you can cancel whatever you choose.
 

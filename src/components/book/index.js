@@ -89,7 +89,7 @@ class Book extends Component{
                 </h5>
                     <p>
                      <FontAwesomeIcon icon={["fas", "user"]} />    
-                     {` Author: ${this.props.book.author.name.first} ${this.props.book.author.name.last}`}
+                     {` Author: ${this.props.book.authorlast} ${this.props.book.authorlast}`}
                     </p>
                 {this.state.status === "edit" ? (
                     <p>

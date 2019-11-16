@@ -1,5 +1,7 @@
 import React,{Component} from "react";
-import "./filterControls.css"
+import { Link } from "react-router-dom";
+import "./filterControls.css";
+
 
 export default class FilterControls extends Component {
 
@@ -55,7 +57,8 @@ export default class FilterControls extends Component {
                             <div>
                                 <button className="fliterbtn" href="#" onClick={this.handleHome}>Home</button>
                                 <button className="fliterbtn" href="#" onClick={this.handleMark}>Leaderboard</button>
-                                <button className="fliterbtn" href="#" onClick={this.handleDate}>New Shelves</button>                             
+                                <button className="fliterbtn" href="#" onClick={this.handleDate}>New Shelves</button>
+                                <Link to={`/book/addBook`}><button className="fliterbtn">Add a Book</button></Link>                   
                            </div> 
                         </nav>
                     </div>

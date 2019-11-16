@@ -1,11 +1,10 @@
 {
   "results":[
         {
-            "id":"6",
+            "id":"0",
             "name": "Pride and Prejudice",
-            "author": {
-                    "name":{ "first":"Jane", "last":"Austen"}
-                },
+            "authorfirst": "Jane",
+            "authorlast": "Austen",
             "mark" : "6",
             "type" : "Romantic",
             "large": "../../images/pride.jpg",
@@ -15,11 +14,10 @@
             "picture": {"thumbnail": "./images/pride.jpg"}
         },
         {
-            "id":"5",
+            "id":"1",
             "name": "Three Body",
-            "author": {
-                    "name":{ "first":"Cixin", "last":"Liu"}
-                },
+            "authorfirst": "Cixin",
+            "authorlast": "Liu",
             "mark" : "5",
             "type" : "Science",
             "large": "../../images/threebody.jpg",
@@ -29,11 +27,10 @@
             "picture": {"thumbnail": "./images/threebody.jpg"}
         },
         {
-            "id":"4",
+            "id":"2",
             "name": "Goosebumps",
-            "author": {
-                    "name":{ "first":"Eric", "last":"Affabee"}
-                },
+            "authorfirst": "Eric",
+            "authorlast": "Affabee",
             "mark" : "4",
             "type" : "Children",
             "large": "../../images/goosebumps.jpg",
@@ -45,9 +42,8 @@
         {
             "id":"3",
             "name": "Twenty Thousand Leagues Under The Sea",
-            "author": {
-                    "name":{ "first":"Jules", "last":"Verne"}
-                },
+            "authorfirst": "Jules",
+            "authorlast": "Verne",
             "mark" : "3",
             "type" : "Science",
             "large": "../../images/twentysea.jpg",
@@ -57,11 +53,10 @@
             "picture": {"thumbnail": "./images/twentysea.jpg"}
         },
         {
-            "id":"2",
+            "id":"4",
             "name": "Walden",
-            "author": {
-                    "name":{ "first":"Henry David", "last":"Thoreau"}
-                },
+            "authorfirst": "Henry David",
+            "authorlast": "Thoreau",
             "mark" : "2",
             "type" : "Romantic",
             "large": "../../images/walden.jpg",
@@ -71,11 +66,10 @@
             "picture": {"thumbnail": "./images/walden.jpg"}
         },
         {
-            "id":"1",
+            "id":"5",
             "name": "Kinder-und Hausmärchen",
-            "author": {
-                    "name":{ "first":"Wilhelm", "last":"Grimm"}
-                },
+            "authorfirst": "Wilhelm",
+            "authorlast": "Grimm",
             "mark" : "1",
             "type" : "Children",
             "large": "../../images/grimm.jpg",
