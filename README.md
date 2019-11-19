@@ -68,7 +68,7 @@ I used json to store data.
 ## Storybook.
 
 
-![][stories]
+![][stories](img/stories.png)
 
 
 
