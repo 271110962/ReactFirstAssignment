@@ -32,26 +32,26 @@ npm start
 
 I used json to store data.
 
-![](./image/data.png)
+![](img/data.png)
 
 ## UI Design.
 
-![](./img/main.png)
+![](img/main.png)
 
 >> Shows a book for each book in the dataChange. This book list can be filtered by name and categoty. A book can be edited or deleted a book. 
 
-![](./img/detail1.png)
-![](./img/detail2.png)
-![](./img/detail3.png)
-![](./img/detail4.png)
+![](img/detail1.png)
+![](img/detail2.png)
+![](img/detail3.png)
+![](img/detail4.png)
 
 >> using the filter to connect the catogory selector and the searchbox, it will filter the data with the dataChangeApi, and render to the page, using the buttonconfig in the config folder to change the situation when you edit and delete, you can cancel whatever you choose.
 
-![](./img/detail5.png)
+![](img/detail5.png)
 
 >> The user need to sign up an account to login the home page, and all the information will store in the firebase authentication storage.
 
-![](./img/detail6.png)
+![](img/detail6.png)
 
 >> The user need to login using email and password if already have an account.
 
