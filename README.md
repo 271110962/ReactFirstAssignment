@@ -32,38 +32,26 @@ npm start
 
 I used json to store data.
 
-{
-            "id":"1",
-            "name": "Kinder-und Hausmärchen",
-            "author": {
-                    "name":{ "first":"Wilhelm", "last":"Grimm"}
-                },
-            "mark" : "1",
-            "type" : "Children",
-            "large": "../../images/grimm.jpg",
-            "publishdate":"20161205",
-            "publishinghouse": "dublin Press",
-            "picture": {"thumbnail": "./images/grimm.jpg"}
-        }
+![](./image/data.png)
 
 ## UI Design.
 
-![][main]
+![](./img/main.png)
 
 >> Shows a book for each book in the dataChange. This book list can be filtered by name and categoty. A book can be edited or deleted a book. 
 
-![][detail1]
-![][detail2]
-![][detail3]
-![][detail4]
+![](./img/detail1.png)
+![](./img/detail2.png)
+![](./img/detail3.png)
+![](./img/detail4.png)
 
 >> using the filter to connect the catogory selector and the searchbox, it will filter the data with the dataChangeApi, and render to the page, using the buttonconfig in the config folder to change the situation when you edit and delete, you can cancel whatever you choose.
 
-![][detail5]
+![](./img/detail5.png)
 
 >> The user need to sign up an account to login the home page, and all the information will store in the firebase authentication storage.
 
-![][detail6]
+![](./img/detail6.png)
 
 >> The user need to login using email and password if already have an account.
 
@@ -96,7 +84,7 @@ using the firebase authentication which is the email and password authentication
 
 using the Surge to deployed the app.  url:  feigned-action.surge.sh 
 
-
+[data]: (./image/data.png)
 [main]: (./img/main.png)
 [detail1]: (./img/detail1.png)
 [detail2]: (./img/detail2.png)
