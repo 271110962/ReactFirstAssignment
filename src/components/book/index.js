@@ -13,10 +13,12 @@ class Book extends Component{
         id: this.props.book.id,
         name: this.props.book.name,
         type: this.props.book.type,
+        mark: this.props.book.mark,
         previousDetails: {
             id: this.props.book.id,
             name: this.props.book.name,
-            type: this.props.book.type
+            type: this.props.book.type,
+            mark: this.props.book.mark
             }
     };
 
@@ -27,21 +29,23 @@ class Book extends Component{
         e.preventDefault();
         let updatedName = this.state.name.trim();
         let updatedType = this.state.type.trim();
-        if(!updatedName || !updatedType){
+        let updatedMark = this.state.mark.trim();
+        if(!updatedName || !updatedType||!updatedMark){
             return;
         }
-        let {name,type} = this.state;
-        this.setState({ status:"",previousDetails:{name,type}});
-        api.update(this.state.previousDetails.name,updatedName,updatedType);
+        let {name,type,mark} = this.state;
+        this.setState({ status:"",previousDetails:{name,type,mark}});
+        api.update(this.state.previousDetails.name,updatedName,updatedType,updatedMark);
     };
 
     handleCancel=()=>{
-        let{name,type} = this.state.previousDetails;
-        this.setState({status:"",name,type});
+        let{name,type,mark} = this.state.previousDetails;
+        this.setState({status:"",name,type,mark});
     };
 
     handleNameChange=e=>this.setState({name:e.target.value});
     handleTypeChange=e=>this.setState({type:e.target.value});
+    handleMarkChange=e=>this.setState({mark:e.target.value});
 
 
     handleDelete = () =>  this.setState({ status : 'del'} );
@@ -101,9 +105,15 @@ class Book extends Component{
                         <span> Category: {this.props.book.type}</span>
                     </p>
                 )}
+                {this.state.status === "edit" ?(
+                    <p>
+                    <input type="text" className="form-control" value={this.state.mark} onChange={this.handleMarkChange}/>
+                    </p>
+                ):(
                     <div className="mark">
                         <span className ="bookmarkfont"> Book Review: </span><Star star={this.props.book.mark}/>
                     </div>
+                )}
                 </div>
 
                 <div className="card-footer">

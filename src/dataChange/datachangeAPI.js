@@ -55,11 +55,12 @@ class DataAPI {
         return this.books;
     }
 
-    update(key, name,type) {
+    update(key, name,type,mark) {
         let index = _.findIndex(this.books, book => book.name === key);
         if (index !== -1) {
         this.books[index].name = name;
         this.books[index].type = type;
+        this.books[index].mark = mark;
         return true;
         }
         return false;
