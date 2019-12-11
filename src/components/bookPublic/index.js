@@ -14,7 +14,7 @@ export default ({ user }) => {
       <div className="publicbg">
       <div className="row">
       <div className="col-2">
-        <Link to="/">
+        <Link to="/home">
           <FontAwesomeIcon icon={["fas", "chevron-circle-left"]} size="3x" />
           <span className="f"> Back</span>
         </Link>

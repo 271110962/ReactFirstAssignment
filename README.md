@@ -82,7 +82,7 @@ using the firebase authentication which is the email and password authentication
 
 ## Independent learning.
 
-using the Surge to deployed the app.  url:  truthful-instrument.surge.sh 
+using the Surge to deployed the app.  url:  needless-worm.surge.sh 
 
 [data]: (./image/data.png)
 [main]: (./img/main.png)
